@@ -14,7 +14,14 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Kessir Adjaho',
-  plugins: [],
+  plugins: [
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-32598219-7'
+      }
+    }
+  ],
   css: {
     loaderOptions: {
       postcss: {
