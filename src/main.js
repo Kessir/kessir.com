@@ -9,11 +9,17 @@ export default function (Vue, { router, head, isClient }) {
 
   // Add a meta tag
   head.meta.push({
+    key: 'keywords',
     name: 'keywords',
     content: 'Kessir,Adjaho,Software,Developer'
   })
-  head.meta.push({
-    name: 'description',
-    content: 'I am Kessir Adjaho, a Full-Stack Web Developer and an Android Developer. I work with the following technologies: Kotlin, SpringBoot, Node.js , Vue.js'
-  })
+  // head.meta.push({
+  //   key: 'description',
+  //   name: 'description',
+  //   content: 'I am Kessir Adjaho, a Full-Stack Web Developer and an Android Developer. I work with the following technologies: Kotlin, SpringBoot, Node.js , Vue.js'
+  // })
+  
+  // Bugfix
+  const desc = head.meta.find(meta=> meta.name === 'description');
+  desc.content = 'I am Kessir Adjaho, a Full-Stack Web Developer and an Android Developer. I work with the following technologies: Kotlin, SpringBoot, Node.js , Vue.js'
 }
