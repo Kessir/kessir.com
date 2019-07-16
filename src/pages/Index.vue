@@ -21,7 +21,7 @@ And <span class="tech">Kotlin</span> <span class="tech">Flutter</span> for mobil
 <script>
 export default {
   metaInfo: {
-    title: 'Home'
+    title: 'Software Engineer'
   }
 };
 </script>
