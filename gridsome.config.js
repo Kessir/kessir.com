@@ -14,12 +14,44 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Kessir Adjaho',
+  siteDescription: "Kessir Adjaho, Software Engineer",
+  siteUrl: "https://kessir.com",
+  titleTemplate: `%s | Kessir Adjaho`,
+  transformers: {
+    remark: {
+      externalLinksTarget: '_blank',
+      externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
+      anchorClassName: 'icon icon-link',
+      plugins: [
+        '@gridsome/remark-prismjs'
+      ]
+    }
+  },
   plugins: [
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
         id: 'UA-32598219-7'
       }
+    },
+    {
+      use: "@gridsome/source-filesystem",
+      options: {
+        path: "content/articles/**/*.md",
+        typeName: "Post",
+        route:'blog/:slug',
+        refs:{
+          tags:{
+            typeName: 'Tag',
+            route: '/tag/:id',
+            create: true
+          }
+        }
+      }
+    },
+    {
+      use: '@gridsome/plugin-sitemap',
+      options:{}
     }
   ],
   css: {

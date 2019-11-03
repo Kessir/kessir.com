@@ -1,17 +1,48 @@
 <template>
   <Layout>
-    <div class="text-center">
-    <h1 class="text-4xl  m-4">Blog</h1>
-    <hr>
-    <p class="text-4xl mt-10">Coming Soon..</p>
-  </div>
+    <div class="m-0 m-auto max-w-4xl ">
+      <h1 class="text-4xl m-2 text-center ">Kessir's Blog</h1>
+      <p class="text-center ">Here I write mostly about software development.</p>
+      <hr />
+      <div class="mt-8">
+        <article
+          v-for="article in articles"
+          :key="article.id"
+          class="mt-4 py-6 px-8 sm:pt-10 sm:pb-12 sm:px-16 bg-white shadow-md rounded">
+          <g-link class="hover:text-gray-600" :to="article.node.path">
+            <h2 class="text-2xl font-semibold text-left">{{ article.node.title }}</h2>
+          </g-link>
+
+          <p class="mt-4 text-left">{{ article.node.excerpt }}</p>
+        </article>
+      </div>
+    </div>
   </Layout>
 </template>
-
+<page-query>
+query allPost {
+    allPost: allPost{
+    edges{
+      node{
+        content
+        title
+        id
+        excerpt
+        path
+      }
+    }
+  }
+}
+</page-query>
 <script>
 export default {
   metaInfo: {
-    title: 'Blog'
+    title: "Blog"
+  },
+  computed: {
+    articles() {
+      return this.$page.allPost.edges;
+    }
   }
-}
+};
 </script>

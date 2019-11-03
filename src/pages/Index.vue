@@ -22,16 +22,17 @@
         <span class="tech">Kotlin</span>
         <span class="tech">Flutter</span> for mobile development.
       </p>
-      <p class="mt-8 text-sm max-w-lg m-auto text-gray-700">
+      <p class="mt-10 text-base max-w-2xl m-auto">
         In my spare time I host
         <a
           target="_blank"
           rel="noopener noreferrer"
-          class="text-indigo-700 underline uppercase text-xs"
+          class="text-indigo-700 underline font-semibold text-base"
           href="https://afrodevpodcast.com/"
-        >AfrodevPodcast</a>
-, a podcast where I have interesting conversations with other african software developers.
+        >AfrodevPodcast</a> 🎤
+        , a podcast where I have interesting conversations with other african software developers.
       </p>
+
       <p class="mt-8 mb-6 text-violet text-sm sm:text-base">
         <a href="mailto:hi@kessir.com" target="_blank" rel="noopener">hi@kessir.com</a> |
         <a href="https://github.com/kessir" target="_blank" rel="noopener">github.com/kessir</a>
