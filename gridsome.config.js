@@ -14,9 +14,13 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Kessir Adjaho',
-  siteDescription: "Kessir Adjaho, Software Engineer",
+  siteDescription: "Kessir Adjaho, Full-Stack Software Engineer",
   siteUrl: "https://kessir.com",
   titleTemplate: `%s | Kessir Adjaho`,
+  templates: {
+    Post: '/blog/:slug',
+    Tag: '/tag/:id'
+  },
   transformers: {
     remark: {
       externalLinksTarget: '_blank',
@@ -39,11 +43,9 @@ module.exports = {
       options: {
         path: "content/articles/**/*.md",
         typeName: "Post",
-        route:'blog/:slug',
         refs:{
           tags:{
             typeName: 'Tag',
-            route: '/tag/:id',
             create: true
           }
         }

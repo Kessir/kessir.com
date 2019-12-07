@@ -3,8 +3,9 @@ title: 'Why you should try TailwindCSS'
 date: 2019-10-01
 excerpt: 'TailwindCSS describes itself as "utility-first CSS framework". This means that instead of giving you ready-made components like card, nav, form-group, it gives you low-level utility classes such as font-size, padding, margin. It is almost like writing inline css.'
 published: true
+slug: 'why-you-should-try-tailwind-css'
 canonical_url: false
-tags: ['Software Engineering', 'Front End']
+tags: ['Software Engineering', 'Front End', 'CSS', 'Tailwind', 'TailwindCSS']
 ---
 
 [TailwindCSS](https://tailwindcss.com/) is a utility-first CSS framework. This means that instead of giving you ready-made components like `.card`, `.button`, `.form-group`, it gives you low-level utility classes such as `.text-lg .text-4xl` for font size, `.m-4 .mx-10 ` for margin etc. 

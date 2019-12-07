@@ -2,7 +2,7 @@
   <Layout>
     <div class="m-auto max-w-4xl">
     <div class="text-center">
-      <h2 class="text-xl sm:text-3xl font-semibold">{{$page.post.title}}</h2>
+      <h1 class="text-xl sm:text-3xl font-semibold">{{$page.post.title}}</h1>
       <h4 class="text-sm text-gray-600 mt-2">{{$page.post.date}}. <span class="font-semibold">{{$page.post.timeToRead}} min read.</span> </h4>
     </div>
     <div
@@ -21,6 +21,11 @@ query Post ($path: String!) {
     excerpt
     timeToRead
     date(format: "MMMM D, YYYY")
+    tags {
+      id
+      title
+      path
+    }
   }
 }
 </page-query>

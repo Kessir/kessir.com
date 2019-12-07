@@ -13,13 +13,5 @@ export default function (Vue, { router, head, isClient }) {
     name: 'keywords',
     content: 'Kessir,Adjaho,Software,Engineer'
   });
-  // head.meta.push({
-  //   key: 'description',
-  //   name: 'description',
-  //   content: 'I am Kessir Adjaho, a Full-Stack Web Developer and an Android Developer. I work with the following technologies: Kotlin, SpringBoot, Node.js , Vue.js'
-  // })
   
-  // Bugfix
-  const desc = head.meta.find(meta=> meta.name === 'description');
-  desc.content = 'I am Kessir Adjaho, a Full-Stack Web Developer and an Android Developer. I work with the following technologies: Kotlin, SpringBoot, Node.js , Vue.js';
 }
