@@ -6,6 +6,7 @@
   @apply px-3 py-1 mx-1 border border-violet rounded-full text-xs text-violet;
 }
 
+/* purgecss ignore current */
 li a.active--exact {
   padding-right: 0.1rem;
   padding-left: 0.1rem;
