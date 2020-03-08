@@ -2,7 +2,7 @@
   <Layout>
     <div class="text-center">
       <!-- <img class="h-48 m-auto" src="../../static/dev-illustration.svg" alt /> -->
-      <img class="h-64 m-auto rounded-full" src="../../static/kessir_2.jpeg" alt />
+      <img class="h-64 m-auto rounded-full" src="../../static/kessir_3.jpg" alt />
 
       <h2 class="mt-4 text-5xl sm:text-6xl">
         Hi, I'm
