@@ -34,6 +34,6 @@ Now master has the search bar bug-fix and your users are happy.
 
 ## Be careful though
 
-You have to keep in mind that this is a somewhat dangerous process. You end up with fundamentally different branches and you will have a hard time joining them in the future. In the example above, merging develop into master later on will be a challenge.
+You have to keep in mind that this is a somewhat dangerous operation. You end up with the 2 branches having fundamentally different commit histories. This makes it hard to merge them in the future. In the example above, merging `develop` into `master` later on will be a challenge.
 
-A common practice is to cherry-pick into a long-lived branch you don't intend to merge into other branches.
+You should only cherry-pick when merge and rebase are not an option.
